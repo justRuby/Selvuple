@@ -1,0 +1,18 @@
+﻿<Application x:Class="ServiceHelper.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ServiceHelper"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Colors.xaml"/>
+                <ResourceDictionary Source="Styles/FocusVisualButton.xaml"/>
+                <ResourceDictionary Source="Styles/RoundCornerButton.xaml"/>
+                <ResourceDictionary Source="Styles/CustomScroll.xaml"/>
+                <ResourceDictionary Source="Styles/HoverEffectButton.xaml"/>
+                <ResourceDictionary Source="Styles/HoverShadowEffectButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

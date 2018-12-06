@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceHelper.Forms"
+        xmlns:CustomsElem="clr-namespace:ServiceHelper.CustomsElem" x:Class="ServiceHelper.Forms.BuyProducts"
+        mc:Ignorable="d"
+        Title="Покупка продуктов" Height="200" Width="308" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Margin="10,10,10,0" Background="White" VerticalAlignment="Top" Height="70">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="10" Color="#FFC8C8C8" ShadowDepth="0"/>
+            </Grid.Effect>
+            <CustomsElem:CustomTextBox x:Name="nameProductTextBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="Наименование продукта" VerticalAlignment="Top" Width="258" FontSize="14" Placeholder="Наименование продукта" FontWeight="Medium" Background="White" Foreground="#FF4C4C4C"/>
+            <CustomsElem:CustomTextBox x:Name="costTextBox" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" Text="Цена" VerticalAlignment="Top" Width="128" FontSize="14" Placeholder="Цена" FontWeight="Medium" Background="White" Foreground="#FF4C4C4C" PreviewTextInput="NumberValidationTextBox"/>
+            <CustomsElem:CustomTextBox x:Name="countTextBox" HorizontalAlignment="Left" Height="23" Margin="143,38,0,0" TextWrapping="Wrap" Text="Кол-во" VerticalAlignment="Top" Width="57" FontSize="14" Placeholder="Кол-во" FontWeight="Medium" Background="White" Foreground="#FF4C4C4C" PreviewTextInput="NumberValidationTextBox"/>
+
+        </Grid>
+        <Button x:Name="buyButton" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="120" Height="40" BorderBrush="{x:Null}" Background="White" FontWeight="Medium" Style="{DynamicResource HoverShadowEffectExitButton}" Click="buyButton_Click">
+            <TextBlock Text="Купить" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button x:Name="cancelButton" HorizontalAlignment="Right" Margin="0,110,10,0" VerticalAlignment="Top" Width="120" Height="40" BorderBrush="{x:Null}" Background="White" FontWeight="Medium" Style="{DynamicResource HoverShadowEffectExitButton}" Click="cancelButton_Click">
+            <TextBlock Text="Отмена" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+
+    </Grid>
+</Window>

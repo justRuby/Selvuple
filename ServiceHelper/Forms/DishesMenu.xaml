@@ -1,0 +1,64 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceHelper.Forms"
+        xmlns:CustomsElem="clr-namespace:ServiceHelper.CustomsElem" x:Class="ServiceHelper.Forms.DishesMenu"
+        mc:Ignorable="d"
+        Title="Sevluple" Height="600" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" WindowState="Maximized">
+    <Grid Background="#FFEDEEF0">
+        <Grid.Effect>
+            <BlurEffect x:Name="DishMenuGridBlurEffect" Radius="0" />
+        </Grid.Effect>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="140" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Height="60" VerticalAlignment="Top" Background="#FF4A76A8" Panel.ZIndex="1">
+            <Grid.Effect>
+                <DropShadowEffect RenderingBias="Quality" ShadowDepth="0" Direction="360" BlurRadius="10"/>
+            </Grid.Effect>
+            <Button x:Name="addDishToMenuButton" Content="Button" HorizontalAlignment="Right" Margin="0,10,20,0" VerticalAlignment="Top" Width="40" Height="40" Foreground="{x:Null}" BorderBrush="{x:Null}" Padding="1" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource HoverShadowEffectExitButton}" Click="addDishToMenuButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/ServiceHelper;component/Image/AddV4.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="backToMainMenuButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Click="backToMainMenuButton_Click" Height="40" Margin="20,10,0,0" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource HoverShadowEffectExitButton}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/ServiceHelper;component/Image/BackV5.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1" PanningMode="VerticalOnly" PanningDeceleration="0.1" Margin="40,0" Background="White">
+            <WrapPanel x:Name="dishesMenuWrapPanel" Height="AUTO" Width="AUTO" ItemHeight="380" ItemWidth="320" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+
+            </WrapPanel>
+        </ScrollViewer>
+
+        <Grid Grid.Row="2" Background="#FF4A76A8" VerticalAlignment="Center" Margin="0" Height="140">
+            <Grid.Effect>
+                <DropShadowEffect Direction="0" BlurRadius="10" ShadowDepth="0" RenderingBias="Quality"/>
+            </Grid.Effect>
+            <ScrollViewer Grid.Column="0" Margin="10,5,220,5" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="110" Background="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0">
+                <StackPanel x:Name="dishesBasketWrapPanel" Height="110" Width="AUTO" Margin="0" Background="#FFC9C9C9" CanHorizontallyScroll="True" UseLayoutRounding="False" Orientation="Horizontal" HorizontalAlignment="Left">
+
+                </StackPanel>
+            </ScrollViewer>
+
+            <Grid Height="40" Width="90" Background="#FFD15959" HorizontalAlignment="Right" Margin="0,50,110,50" Grid.ColumnSpan="2">
+                <Grid.Effect>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="0" Opacity="0.3"/>
+                </Grid.Effect>
+                <TextBlock x:Name="FullCostOfIssue" Text="0 руб." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="SemiBold" Foreground="White"/>
+            </Grid>
+            <Button x:Name="checkoutButton" HorizontalAlignment="Right" Margin="0,30,20,30" Width="80" Height="80" Click="checkoutButton_Click" BorderBrush="{x:Null}" FontSize="14" FontWeight="SemiBold" Foreground="#FF4C4C4C" Style="{DynamicResource HoverShadowEffectExitButton}" Background="#FF4A76A8" Grid.Column="1">
+                <TextBlock Text="Оформить" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

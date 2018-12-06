@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ServiceHelper.CustomsElem.CustomTextBoxWithLabel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ServiceHelper.CustomsElem"
+             mc:Ignorable="d" Height="103.333" Width="338">
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textBlock" Grid.Row="0" Text="TextBlock" FontSize="14" FontWeight="Medium"/>
+        <TextBox x:Name="textBox" Grid.Row="1" Text="TextBox" FontWeight="SemiBold" Foreground="#FF4C4C4C"/>
+    </Grid>
+</UserControl>

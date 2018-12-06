@@ -1,0 +1,25 @@
+﻿<Window x:Class="ServiceHelper.Forms.StaffList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceHelper.Forms"
+        mc:Ignorable="d"
+        Title="Список персонала" Height="450" Width="1200" ResizeMode="NoResize" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <DataGrid x:Name="staffDataGrid" Grid.Row="1" Margin="20" Background="White" AutoGenerateColumns="False" Foreground="#FF4C4C4C" HorizontalGridLinesBrush="#FF4C4C4C" VerticalGridLinesBrush="#FF4C4C4C" BorderBrush="White">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding UserID}" Header="Номер" Width="80" Foreground="#FF4C4C4C" FontWeight="Medium"/>
+                <DataGridTextColumn Binding="{Binding FullName}" Header="ФИО" Width="*" Foreground="#FF4C4C4C" FontWeight="Medium"/>
+                <DataGridTextColumn Binding="{Binding Passport}" Header="Паспорт" Width="140" Foreground="#FF4C4C4C" FontWeight="Medium"/>
+                <DataGridTextColumn Binding="{Binding Adress}" Header="Адрес" Width="140" Foreground="#FF4C4C4C" FontWeight="Medium"/>
+                <DataGridTextColumn Binding="{Binding Phone}" Header="Номер" Width="140" Foreground="#FF4C4C4C" FontWeight="Medium"/>
+                <DataGridTextColumn Binding="{Binding Login}" Header="Логин" Width="140" Foreground="#FF4C4C4C" FontWeight="Medium"/>
+                <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" Width="140" Foreground="#FF4C4C4C" FontWeight="Medium"/>
+                <DataGridTextColumn Binding="{Binding Level}" Header="Уровень доступа" Width="120" Foreground="#FF4C4C4C" FontWeight="Medium"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
